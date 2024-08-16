@@ -185,7 +185,7 @@ async def start_command(client, message):
                 "Your ads token has expired. Please refresh your token and try again.\n\n"
                 f"Token Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\n"
                 "What is the token?\n\n"
-                "This is an ads token. If you pass 1 ad, you can use the bot for 12 hours after passing the ad.\n\n"
+                "This is an ads token. If you pass 1 ad, you can use the bot for 1 day after passing the ad.\n\n"
             )
             token_button = InlineKeyboardButton("Get Token", url=link)
             tutorial_button = InlineKeyboardButton("How to Verify", url="https://t.me/How_To_Watch_SG_Videos/4")
