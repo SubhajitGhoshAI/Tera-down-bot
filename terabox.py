@@ -39,18 +39,18 @@ if not api_hash:
     logging.error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
     
-bot_token = os.environ.get('BOT_TOKEN', '')
+bot_token = os.environ.get('BOT_TOKEN', '7417222367:AAH-auWv2bTyEUZm9DLrmI_SqqqiZSjSPow')
 if not bot_token:
     logging.error("BOT_TOKEN variable is missing! Exiting now")
     exit(1)
-dump_id = os.environ.get('DUMP_CHAT_ID', '-1002237890900')
+dump_id = os.environ.get('DUMP_CHAT_ID', '-1001845309431')
 if not dump_id:
     logging.error("DUMP_CHAT_ID variable is missing! Exiting now")
     exit(1)
 else:
     dump_id = int(dump_id)
 
-fsub_id = os.environ.get('FSUB_ID', '-1002039621655')
+fsub_id = os.environ.get('FSUB_ID', '-1001877309572')
 if not fsub_id:
     logging.error("FSUB_ID variable is missing! Exiting now")
     exit(1)
@@ -162,7 +162,7 @@ async def start_command(client, message):
             return await message.reply("Your token is invalid or expired. Try again by clicking /start.")
         await db_update_verify_status(user_id, {**verify_status, 'is_verified': True, 'verified_time': time.time()})
         logging.info(f"User {user_id} verified successfully")
-        return await message.reply("Your token has been successfully verified and is valid for 12 hours.")
+        return await message.reply("Your token has been successfully verified and is valid for 24 hours.")
 
     if verify_status["is_verified"]:
         logging.info(f"User {user_id} is verified")
@@ -308,7 +308,7 @@ async def handle_message(client, message: Message):
     is_member = await is_user_member(client, user_id)
 
     if not is_member:
-        join_button = InlineKeyboardButton("Join ❤️🚀", url="https://t.me/SG_UPDATE_CHANNEL")
+        join_button = InlineKeyboardButton("Join ❤️🚀", url="https://t.me/SGBACKUP")
         reply_markup = InlineKeyboardMarkup([[join_button]])
         await message.reply_text("You must join my channel to use me.", reply_markup=reply_markup)
         return
