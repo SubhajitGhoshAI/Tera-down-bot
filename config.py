@@ -9,8 +9,8 @@ DB_NAME = os.environ.get("DATABASE_NAME", "cphdlust")
 # check my discription to help by using my refer link of shareus.io
 
 
-SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "ziplinker.net")
-SHORTLINK_API = os.environ.get("SHORTLINK_API", "49be579e7f37d56e8f6987ba486b0aff1d0d1f77")
+SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "yamlinks.com")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "58e579aa6fe2c1cc91a7c2f1e79b57e9ab380c6a")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
 TUT_VID = os.environ.get("TUT_VID", "https://t.me/How_To_Watch_SG_Videos/4") # shareus ka tut_vid he 
